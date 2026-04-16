@@ -1,0 +1,41 @@
+int r1, r2;
+
+void setup() {
+    pinMode(A1, INPUT);
+    pinMode(A3, INPUT);
+
+    pinMode(5, OUTPUT);
+    pinMode(6, OUTPUT);
+    pinMode(7, OUTPUT);
+    pinMode(8, OUTPUT);
+}
+
+void loop() {
+    r1 = digitalRead(A1);
+    r2 = digitalRead(A3);
+
+    if (r1 == LOW && r2 == LOW) {
+        digitalWrite(5, HIGH);
+        digitalWrite(6, LOW);
+        digitalWrite(7, LOW);
+        digitalWrite(8, HIGH);
+    }
+    else if (r1 == HIGH && r2 == LOW) {
+        digitalWrite(5, HIGH);
+        digitalWrite(6, LOW);
+        digitalWrite(7, LOW);
+        digitalWrite(8, LOW);
+    }
+    else if (r1 == LOW && r2 == HIGH) {
+        digitalWrite(5, LOW);
+        digitalWrite(6, LOW);
+        digitalWrite(7, LOW);
+        digitalWrite(8, HIGH);
+    }
+    else {
+        digitalWrite(5, LOW);
+        digitalWrite(6, LOW);
+        digitalWrite(7, LOW);
+        digitalWrite(8, LOW);
+    }
+}

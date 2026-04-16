@@ -1,0 +1,25 @@
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  for (int i = 0; i < 60; i++) Serial.print("*");
+  Serial.println();
+
+  Serial.println("Roll No: 1024030023, 1024030022, 1024030021, 1024030020, 1024030024");
+
+  for (int i = 0; i < 60; i++) Serial.print("*");
+  Serial.println();
+
+  Serial.println("Name: DIBYANSHU SAMAL, ARJUN PURI, SARAS, MEHUL JAIN, ADITI SINHA");
+
+  for (int i = 0; i < 60; i++) Serial.print("*");
+  Serial.println();
+
+  Serial.println("Branch: COE");
+
+  for (int i = 0; i < 60; i++) Serial.print("*");
+  Serial.println();
+
+  while (true); // stop repeating
+}

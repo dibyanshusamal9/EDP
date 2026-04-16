@@ -1,0 +1,16 @@
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Serial Communication Started");
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char data = Serial.read();
+
+    Serial.print("Received: ");
+    Serial.println(data);
+
+    Serial.print("Echo: ");
+    Serial.println(data);
+  }
+}
